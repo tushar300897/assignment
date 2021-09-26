@@ -1,0 +1,19 @@
+uuid: c9e0b804-ee62-4866-bd63-7ee55dadb09e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.conferences
+    - field.storage.block_content.field_title
+id: block_content.conferences.field_title
+field_name: field_title
+entity_type: block_content
+bundle: conferences
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

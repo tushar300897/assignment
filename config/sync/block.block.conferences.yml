@@ -1,0 +1,33 @@
+uuid: 4d70dfa1-6ef2-45f2-87bc-adc709daa9a6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:conferences:eee421cf-f437-4121-8b36-4478daf04f23'
+  module:
+    - block_content
+    - node
+  theme:
+    - mytheme
+id: conferences
+theme: mytheme
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:eee421cf-f437-4121-8b36-4478daf04f23'
+settings:
+  id: 'block_content:eee421cf-f437-4121-8b36-4478daf04f23'
+  label: Conferences
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      landing_page: landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,23 @@
+uuid: adb454ca-c826-4c81-9ba4-5d5f4e073844
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_badge
+    - paragraphs.paragraphs_type.featured_conferences
+  module:
+    - options
+id: paragraph.featured_conferences.field_badge
+field_name: field_badge
+entity_type: paragraph
+bundle: featured_conferences
+label: Badge
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: non-badged
+default_value_callback: ''
+settings: {  }
+field_type: list_string

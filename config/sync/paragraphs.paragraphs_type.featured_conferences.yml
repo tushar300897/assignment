@@ -1,0 +1,10 @@
+uuid: ef9d9ce1-82fe-4e01-873d-3a28dc196bcc
+langcode: en
+status: true
+dependencies: {  }
+id: featured_conferences
+label: 'Featured Conferences'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

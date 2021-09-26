@@ -1,0 +1,8 @@
+uuid: 1a464930-8cc2-4f76-9f36-4506e1574891
+langcode: en
+status: true
+dependencies: {  }
+id: tabs
+label: 'Tabs Conferences'
+description: 'Tab Menu'
+locked: false

@@ -1,0 +1,23 @@
+uuid: de4ddadb-1679-4ade-a7d9-196b2d1f44bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_badge
+    - paragraphs.paragraphs_type.recommended_conferences
+  module:
+    - options
+id: paragraph.recommended_conferences.field_badge
+field_name: field_badge
+entity_type: paragraph
+bundle: recommended_conferences
+label: Badge
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: non-badged
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,86 @@
+uuid: a085d3e0-b2e6-491d-a031-3df4740ea6ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.conferences
+    - field.field.block_content.conferences.field_featured_conferences
+    - field.field.block_content.conferences.field_pas
+    - field.field.block_content.conferences.field_recommended_conferences
+    - field.field.block_content.conferences.field_subtitle
+    - field.field.block_content.conferences.field_title
+  module:
+    - paragraphs
+id: block_content.conferences.default
+targetEntityType: block_content
+bundle: conferences
+mode: default
+content:
+  field_featured_conferences:
+    type: entity_reference_paragraphs
+    weight: 30
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_pas:
+    type: entity_reference_paragraphs
+    weight: 29
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_recommended_conferences:
+    type: entity_reference_paragraphs
+    weight: 28
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_subtitle:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

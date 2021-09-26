@@ -1,0 +1,21 @@
+uuid: f893c79e-732d-491f-a943-6df481d86727
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.featured_conferences
+  module:
+    - datetime
+id: paragraph.featured_conferences.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: featured_conferences
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

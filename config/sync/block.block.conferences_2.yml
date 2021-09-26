@@ -1,0 +1,33 @@
+uuid: 078e7ccc-d58d-4594-b988-62f467414338
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:conferences:eee421cf-f437-4121-8b36-4478daf04f23'
+  module:
+    - block_content
+    - node
+  theme:
+    - bartik
+id: conferences_2
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:eee421cf-f437-4121-8b36-4478daf04f23'
+settings:
+  id: 'block_content:eee421cf-f437-4121-8b36-4478daf04f23'
+  label: Conferences
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      landing_page: landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

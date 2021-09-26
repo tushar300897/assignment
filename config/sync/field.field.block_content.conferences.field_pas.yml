@@ -1,0 +1,37 @@
+uuid: 6ee40ff7-58d4-4488-a615-4f9f6fe40f88
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.conferences
+    - field.storage.block_content.field_pas
+    - paragraphs.paragraphs_type.past_conferences
+  module:
+    - entity_reference_revisions
+id: block_content.conferences.field_pas
+field_name: field_pas
+entity_type: block_content
+bundle: conferences
+label: 'Past Conferences'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      past_conferences: past_conferences
+    target_bundles_drag_drop:
+      featured_conferences:
+        weight: 4
+        enabled: false
+      past_conferences:
+        enabled: true
+        weight: 5
+      recommended_conferences:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

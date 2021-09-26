@@ -1,0 +1,27 @@
+uuid: 5ebe3b87-1414-45c5-ae8b-f589874ed7b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_badge
+field_name: field_badge
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: badged
+      label: 'Yes'
+    -
+      value: non-badged
+      label: 'No'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

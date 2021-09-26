@@ -1,0 +1,11 @@
+uuid: 03e67a11-b731-4a85-a248-af178d22f4ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.conferences
+id: block_content.conferences
+target_entity_type_id: block_content
+target_bundle: conferences
+default_langcode: site_default
+language_alterable: false

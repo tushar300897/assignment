@@ -1,0 +1,37 @@
+uuid: 45289ae8-1bee-4e46-aeeb-23931e33797c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.conferences
+    - field.storage.block_content.field_featured_conferences
+    - paragraphs.paragraphs_type.featured_conferences
+  module:
+    - entity_reference_revisions
+id: block_content.conferences.field_featured_conferences
+field_name: field_featured_conferences
+entity_type: block_content
+bundle: conferences
+label: 'Featured Conferences'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      featured_conferences: featured_conferences
+    target_bundles_drag_drop:
+      featured_conferences:
+        enabled: true
+        weight: 4
+      past_conferences:
+        weight: 5
+        enabled: false
+      recommended_conferences:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

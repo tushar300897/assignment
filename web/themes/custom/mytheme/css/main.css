@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+@media (max-width: 991.98px) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for images
+ */
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+.slider-wrapper .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style-type: none;
+  padding: 21px;
+}
+.slider-wrapper .slick-dots li {
+  margin: 0 0.25rem;
+}
+.slider-wrapper .slick-dots button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 2px solid #267CCF;
+  border-radius: 100%;
+  background-color: transparent;
+  text-indent: -9999px;
+}
+.slider-wrapper .slick-dots li.slick-active button {
+  background-color: #267CCF;
+}
+
+.slick-previous {
+  position: absolute;
+  left: -32px;
+  top: 40%;
+}
+.slick-previous .fas {
+  font-size: 32px;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .slick-previous {
+    display: none;
+  }
+}
+
+.slick-next {
+  position: absolute;
+  right: -32px;
+  top: 40%;
+}
+.slick-next .fas {
+  font-size: 32px;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .slick-next {
+    display: none;
+  }
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.field--name-field-title {
+  font-family: "Roboto", sans-serif;
+}
+
+.block-conferences__title h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+.block-conferences__sub-title {
+  margin-bottom: 75px;
+}
+.block-conferences__sub-title h3 {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #CCCDD2;
+}
+.block-conferences__content {
+  flex-wrap: nowrap;
+}
+.block-conferences__content .nav__tabs {
+  list-style: none;
+  margin-bottom: 30px;
+  flex-wrap: nowrap;
+}
+.block-conferences__content .nav__tabs li.nav-link {
+  border-bottom: 2px solid #267CCF;
+}
+.block-conferences__content .nav__tabs li.nav-link:hover {
+  border-color: #fff #fff #267CCF;
+}
+.block-conferences__content .nav__tabs li.nav-link a {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  color: #017fd5;
+  padding: 0;
+  border: none;
+}
+.block-conferences__content .nav__tabs li.nav-link a.active {
+  color: #828A8D;
+  font-size: 22px;
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.card-wrapper {
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+.card-wrapper .card--non-badged .card__badge {
+  display: none;
+}
+.card-wrapper .card,
+.card-wrapper .card--badged {
+  border: none;
+}
+.card-wrapper .card__badge,
+.card-wrapper .card--badged__badge {
+  position: absolute;
+  height: auto;
+  width: 100px;
+  z-index: 99;
+  left: -29px;
+  top: -29px;
+}
+.card-wrapper .card__price,
+.card-wrapper .card--badged__price {
+  position: absolute;
+  right: 11px;
+  top: 10px;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 0 6px;
+}
+.card-wrapper .card__image,
+.card-wrapper .card--badged__image {
+  height: 200px;
+  overflow: hidden;
+  background-color: #000;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.card-wrapper .card__image img,
+.card-wrapper .card--badged__image img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+.card-wrapper .card__body,
+.card-wrapper .card--badged__body {
+  position: relative;
+  height: 170px;
+  padding: 20px;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+  border-bottom: 2px solid #ECECEC;
+  border-left: 2px solid #ECECEC;
+  border-right: 2px solid #ECECEC;
+  border-radius: 0 0 6px 6px;
+  padding: 20px 30px;
+}
+@media (max-width: 1199.98px) {
+  .card-wrapper .card__body,
+.card-wrapper .card--badged__body {
+    height: auto;
+    padding: 20px 30px 25px;
+  }
+}
+.card-wrapper .card__body h5,
+.card-wrapper .card--badged__body h5 {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400px;
+}
+.card-wrapper .card__body span,
+.card-wrapper .card--badged__body span {
+  font-size: 15px;
+  color: #828A8D;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+}
+.card-wrapper .card__body time,
+.card-wrapper .card--badged__body time {
+  font-size: 15px;
+  color: #828A8D;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+}
+.card-wrapper .card__body .address,
+.card-wrapper .card--badged__body .address {
+  display: inline;
+}
+.card-wrapper .card__body .address br,
+.card-wrapper .card--badged__body .address br {
+  display: none;
+}
+.card-wrapper .card__tags, .card-wrapper .card__marker, .card-wrapper .card__calendar,
+.card-wrapper .card--badged__tags,
+.card-wrapper .card--badged__marker,
+.card-wrapper .card--badged__calendar {
+  margin-bottom: 5px;
+}
+.card-wrapper .card__tags i, .card-wrapper .card__marker i, .card-wrapper .card__calendar i,
+.card-wrapper .card--badged__tags i,
+.card-wrapper .card--badged__marker i,
+.card-wrapper .card--badged__calendar i {
+  margin-right: 10px;
+}
+.card-wrapper .card__tags span:nth-child(n+3)::before, .card-wrapper .card__marker span:nth-child(n+3)::before, .card-wrapper .card__calendar span:nth-child(n+3)::before,
+.card-wrapper .card--badged__tags span:nth-child(n+3)::before,
+.card-wrapper .card--badged__marker span:nth-child(n+3)::before,
+.card-wrapper .card--badged__calendar span:nth-child(n+3)::before {
+  content: ",";
+}
+.card-wrapper .card__tags i,
+.card-wrapper .card--badged__tags i {
+  margin-right: 4px;
+}
+.card-wrapper .card__marker,
+.card-wrapper .card--badged__marker {
+  display: flex;
+  align-items: baseline;
+}
+.card-wrapper .card__marker i,
+.card-wrapper .card--badged__marker i {
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+@media (min-width: 1200px) {
+  .card-wrapper .card:hover .card__image,
+.card-wrapper .card--badged:hover .card__image {
+    height: 155px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  .card-wrapper .card:hover .card__image img,
+.card-wrapper .card--badged:hover .card__image img {
+    opacity: 0.6;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@media (min-width: 1200px) {
+  .card-wrapper .card:hover .card__body,
+.card-wrapper .card--badged:hover .card__body {
+    box-shadow: 0 0 11px 0 rgba(30, 30, 28, 0.15);
+    height: 216px;
+  }
+}
+@media (min-width: 1200px) {
+  .card-wrapper .card:hover .card__marker .address,
+.card-wrapper .card--badged:hover .card__marker .address {
+    margin-bottom: 2px;
+  }
+}
+@media (min-width: 1200px) {
+  .card-wrapper .card:hover .share__block-wrapper,
+.card-wrapper .card--badged:hover .share__block-wrapper {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+}
+
+.share__block-wrapper {
+  opacity: 0;
+  -webkit-transform: translateY(24px);
+  transform: translateY(24px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+@media (max-width: 1199.98px) {
+  .share__block-wrapper {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.nav__tabs .nav-link.active::before,
+.nav__tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.nav__tabs .nav-link.active::before {
+  border-top: 10px solid #267CCF;
+  margin-top: 1px;
+}
+
+/* The white fill of the triangle */
+.nav__tabs .nav-link.active::after {
+  border-top: 10px solid #fff;
+  margin-top: -2px;
+  z-index: 1;
+}
+
+.tab-content {
+  position: relative;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: block;
+  height: 0;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  height: auto;
+}
+
+.fa-map-marker-alt {
+  color: #ED7E6A;
+  font-size: 16px;
+}
+
+.fa-tags,
+.fa-calendar-alt {
+  font-size: 16px;
+  color: #CCCDD2;
+}
+
+.icon__rule {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 1px;
+  background-color: #D9D8DD;
+  height: 54px;
+  margin: 0;
+}
+
+.share__block-wrapper {
+  margin-top: 0px;
+}
+.share__block-wrapper .share__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.share__block-wrapper .share__block span {
+  color: #267CCF;
+  margin-right: -15px;
+}
+@media (max-width: 768px) {
+  .share__block-wrapper .share__block {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 576px) {
+  .share__block-wrapper .share__block {
+    justify-content: space-between;
+  }
+}
+.share__block-wrapper .share_rule {
+  margin: 0 -30px;
+}
+.share__block-wrapper .fas,
+.share__block-wrapper .far {
+  font-size: 24px;
+  color: #D9D8DD;
+}
+.share__block-wrapper .fas:hover,
+.share__block-wrapper .far:hover {
+  color: #267CCF;
+}
+.share__block-wrapper .field--type-link {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+.share__block-wrapper .field--type-link:hover {
+  text-decoration: none;
+}
+
+.slick-arrow .fas {
+  color: #CCCDD2;
+}
+.slick-arrow .fas:hover {
+  color: #267CCF;
+}
+
+/*# sourceMappingURL=main.css.map */

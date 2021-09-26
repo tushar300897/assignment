@@ -1,0 +1,262 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.field--name-field-title {
+  font-family: $font-heading;
+}
+
+.block-conferences {
+
+  &__title {
+
+    h1 {
+      font-family: $font-body;
+      font-weight: 300;
+    }
+  }
+
+  &__sub-title {
+    h3 {
+      font-size: 20px;
+      font-family: $font-body;
+      font-weight: 300;
+      color: $grey;
+    }
+
+    margin-bottom: 75px;
+  }
+
+  &__content {
+    flex-wrap: nowrap;
+
+    .nav__tabs {
+      list-style: none;
+      margin-bottom: 30px;
+      flex-wrap: nowrap;
+
+      li {
+        &.nav-link {
+          border-bottom: 2px solid $blue;
+
+          &:hover {
+            border-color: $white $white $blue;
+          }
+
+          a {
+            font-size: 20px;
+            font-family: $font-body;
+            color: $secondary-blue;
+            padding: 0;
+            border: none;
+
+            &.active {
+              color: $dark-grey;
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.card-wrapper {
+  padding: 0 15px;
+  margin-bottom: 10px;
+
+  .card--non-badged {
+    .card__badge {
+      display: none;
+    }
+  }
+
+  .card,
+  .card--badged {
+    border: none;
+
+    &__badge {
+      position: absolute;
+      height: auto;
+      width: 100px;
+      z-index: 99;
+      left: -29px;
+      top: -29px;
+    }
+
+    &__price {
+      position: absolute;
+      right: 11px;
+      top: 10px;
+      color: $white;
+      font-size: 16px;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 0 6px;
+    }
+
+    &__image {
+      height: 200px;
+      overflow: hidden;
+      background-color: $black;
+      -webkit-transition: height 0.5s;
+      transition: height 0.5s;
+
+      img {
+        width: 100%;
+        display: block;
+        height: 100%;
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+        transition: opacity 0.5s, -webkit-transform 0.5s;
+        transition: opacity 0.5s, transform 0.5s;
+        transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+      }
+    }
+
+    &__body {
+      position: relative;
+      height: 170px;
+      padding: 20px;
+      -webkit-transition: height 0.5s;
+      transition: height 0.5s;
+      border-bottom: 2px solid $light-grey;
+      border-left: 2px solid $light-grey;
+      border-right: 2px solid $light-grey;
+      border-radius: 0 0 6px 6px;
+      padding: 20px 30px;
+
+      @media (max-width: 1199.98px) {
+        height: auto;
+        padding: 20px 30px 25px;
+      }
+
+      h5 {
+        font-family: $font-body;
+        font-size: 18px;
+        font-weight: 400px;
+      }
+
+      span {
+        font-size: 15px;
+        color: $dark-grey;
+        font-weight: 400;
+        font-family: $font-body;
+      }
+
+      time {
+        font-size: 15px;
+        color: $dark-grey;
+        font-weight: 400;
+        font-family: $font-body;
+      }
+
+      .address {
+        display: inline;
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &__tags,
+    &__marker,
+    &__calendar {
+      margin-bottom: 5px;
+
+      i {
+        margin-right: 10px;
+      }
+
+      span {
+        &:nth-child(n + 3) {
+          &::before {
+            content: ',';
+          }
+        }
+      }
+    }
+
+    &__tags {
+      i {
+        margin-right: 4px;
+      }
+    }
+
+    &__marker {
+      i {
+        flex-shrink: 0;
+        margin-right: 16px;
+      }
+
+      display: flex;
+      align-items: baseline;
+    }
+
+    &:hover {
+      .card__image {
+        @media (min-width: 1200px) {
+          height: 155px;
+
+          img {
+            @media (min-width: 1200px) {
+              opacity: 0.6;
+              -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+
+      .card__body {
+
+        @media (min-width: 1200px) {
+          box-shadow: 0 0 11px 0 rgb(30 30 28 / 15%);
+          height: 216px;
+        }
+      }
+
+      .card__marker {
+        .address {
+          @media (min-width: 1200px) {
+            margin-bottom: 2px;
+          }
+        }
+      }
+
+
+      .share__block-wrapper {
+        @media (min-width: 1200px) {
+          opacity: 1;
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+          -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+        }
+      }
+    }
+  }
+}
+
+.share__block-wrapper {
+  opacity: 0;
+  -webkit-transform: translateY(24px);
+  transform: translateY(24px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+
+  @media (max-width: 1199.98px) {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

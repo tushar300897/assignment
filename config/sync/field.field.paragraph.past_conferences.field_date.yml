@@ -1,0 +1,21 @@
+uuid: 556505d3-17ec-4f08-8315-eae07ea9f517
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.past_conferences
+  module:
+    - datetime
+id: paragraph.past_conferences.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: past_conferences
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,23 @@
+uuid: 4a0b55fe-3b4f-4864-b925-4e299d1c14fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_badge
+    - paragraphs.paragraphs_type.past_conferences
+  module:
+    - options
+id: paragraph.past_conferences.field_badge
+field_name: field_badge
+entity_type: paragraph
+bundle: past_conferences
+label: Badge
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: non-badged
+default_value_callback: ''
+settings: {  }
+field_type: list_string

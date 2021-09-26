@@ -1,0 +1,14 @@
+uuid: 10330391-6f24-4b7e-8c66-8eb7d35a281a
+name: mysite
+mail: email@emal
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/2
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

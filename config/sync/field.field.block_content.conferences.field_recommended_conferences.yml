@@ -1,0 +1,37 @@
+uuid: ae5982fc-6430-49f2-b4a5-37a26025ed00
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.conferences
+    - field.storage.block_content.field_recommended_conferences
+    - paragraphs.paragraphs_type.recommended_conferences
+  module:
+    - entity_reference_revisions
+id: block_content.conferences.field_recommended_conferences
+field_name: field_recommended_conferences
+entity_type: block_content
+bundle: conferences
+label: 'Recommended Conferences'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      recommended_conferences: recommended_conferences
+    target_bundles_drag_drop:
+      featured_conferences:
+        weight: 4
+        enabled: false
+      past_conferences:
+        weight: 5
+        enabled: false
+      recommended_conferences:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

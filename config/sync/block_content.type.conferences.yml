@@ -1,0 +1,8 @@
+uuid: c6dab48e-ad13-492d-836e-0ae42901bd70
+langcode: en
+status: true
+dependencies: {  }
+id: conferences
+label: Conferences
+revision: 0
+description: 'A block contains paragraph types of conferences'

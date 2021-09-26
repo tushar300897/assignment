@@ -1,0 +1,10 @@
+uuid: a091b3e6-811d-453a-b182-32c09d39170e
+langcode: en
+status: true
+dependencies: {  }
+id: past_conferences
+label: 'Past Conferences'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,33 @@
+uuid: b738e06a-2ed5-4f25-8d8d-60a3924f62c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tabs
+  module:
+    - node
+    - system
+  theme:
+    - mytheme
+id: tabsconferences
+theme: mytheme
+region: hidden
+weight: -7
+provider: null
+plugin: 'system_menu_block:tabs'
+settings:
+  id: 'system_menu_block:tabs'
+  label: 'Tabs Conferences'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      landing_page: landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

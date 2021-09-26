@@ -1,0 +1,19 @@
+uuid: b8f56103-5dd1-49f2-a881-4ed3da0909ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_categories
+    - paragraphs.paragraphs_type.past_conferences
+id: paragraph.past_conferences.field_categories
+field_name: field_categories
+entity_type: paragraph
+bundle: past_conferences
+label: Categories
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,83 @@
+// icons colour 
+
+.fa-map-marker-alt {
+  color: $orange;
+  font-size: 16px;
+}
+
+.fa-tags,
+.fa-calendar-alt {
+  font-size: 16px;
+  color: $grey;
+}
+
+
+.icon__rule {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 1px;
+  background-color: #D9D8DD;
+  height: 54px;
+  margin: 0;
+
+}
+
+// share block 
+.share__block-wrapper {
+  margin-top: 0px;
+
+  .share__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      color: $blue;
+      margin-right: -15px;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: space-around;
+    }
+
+    @media (max-width: 576px) {
+      justify-content: space-between;
+    }
+  }
+
+  .share_rule {
+    margin: 0 -30px;
+  }
+
+  .fas,
+  .far {
+    font-size: 24px;
+    color: #D9D8DD;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .field--type-link {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+//slider arrows
+.slick-arrow {
+  .fas {
+    color: $grey;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}

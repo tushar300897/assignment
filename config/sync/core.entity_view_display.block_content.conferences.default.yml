@@ -1,0 +1,63 @@
+uuid: 6cd6703d-ac65-4327-926e-8c385d744e2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.conferences
+    - field.field.block_content.conferences.field_featured_conferences
+    - field.field.block_content.conferences.field_pas
+    - field.field.block_content.conferences.field_recommended_conferences
+    - field.field.block_content.conferences.field_subtitle
+    - field.field.block_content.conferences.field_title
+  module:
+    - entity_reference_revisions
+id: block_content.conferences.default
+targetEntityType: block_content
+bundle: conferences
+mode: default
+content:
+  field_featured_conferences:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_pas:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_recommended_conferences:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

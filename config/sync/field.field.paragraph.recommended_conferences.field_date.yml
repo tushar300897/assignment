@@ -1,0 +1,21 @@
+uuid: 8fe190cb-9409-4746-9e01-225c1aa016cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.recommended_conferences
+  module:
+    - datetime
+id: paragraph.recommended_conferences.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: recommended_conferences
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

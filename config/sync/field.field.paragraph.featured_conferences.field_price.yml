@@ -1,0 +1,19 @@
+uuid: ec07103d-a2df-4534-a3af-3939b63913ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_price
+    - paragraphs.paragraphs_type.featured_conferences
+id: paragraph.featured_conferences.field_price
+field_name: field_price
+entity_type: paragraph
+bundle: featured_conferences
+label: Price
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

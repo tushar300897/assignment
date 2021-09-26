@@ -1,0 +1,10 @@
+uuid: 316abccb-7e8a-48b6-8ddd-0b5552df4ef5
+langcode: en
+status: true
+dependencies: {  }
+id: recommended_conferences
+label: 'Recommended Conferences'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

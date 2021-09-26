@@ -1,0 +1,86 @@
+uuid: c274578f-1532-497c-aee3-406b2f7f6222
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.recommended_conferences.field_address
+    - field.field.paragraph.recommended_conferences.field_badge
+    - field.field.paragraph.recommended_conferences.field_button
+    - field.field.paragraph.recommended_conferences.field_categories
+    - field.field.paragraph.recommended_conferences.field_date
+    - field.field.paragraph.recommended_conferences.field_image
+    - field.field.paragraph.recommended_conferences.field_price
+    - field.field.paragraph.recommended_conferences.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.recommended_conferences
+  module:
+    - address
+    - datetime
+    - image
+    - link
+id: paragraph.recommended_conferences.default
+targetEntityType: paragraph
+bundle: recommended_conferences
+mode: default
+content:
+  field_address:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_badge:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_categories:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_price:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

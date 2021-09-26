@@ -1,0 +1,53 @@
+global:
+  version: VERSION
+  js:
+    js/global.js: {}
+  css:
+    component:
+      css/main.css: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal
+# bootstrap:
+#   js:
+#     /libraries/popper.js/dist/umd/popper.min.js: {}
+#     /libraries/bootstrap/dist/js/bootstrap.min.js: {}
+#   css:
+#     component:
+#       /libraries/bootstrap/dist/css/bootstrap.min.css: {}
+# bootstrap_cdn:
+#   js:
+#     //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
+#     //stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js: {}
+#   css:
+#     component:
+#       //stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css: {}
+
+bootstrap:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
+    //stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js: {}
+  css:
+    component:
+     //stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css: {}
+
+font-awesome:
+  remote: https://use.fontawesome.com/releases/v5.6.3/css/all.css:
+  version: 4.5.0
+  license:
+    name: MIT
+    url: https://fortawesome.github.io/Font-Awesome/license/
+    gpl-compatible: true
+  css:
+    theme:
+        https://use.fontawesome.com/releases/v5.1.0/css/all.css: { type: external, minified: true }
+
+slider:
+  css:
+    theme:
+      //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css:
+        { type: external, minified: true }
+  js:
+    //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js:
+      { type: external, minified: true }
