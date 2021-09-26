@@ -1,7 +1,5 @@
 global:
   version: VERSION
-  js:
-    js/global.js: {}
   css:
     component:
       css/main.css: {}
@@ -9,20 +7,6 @@ global:
   dependencies:
     - core/jquery
     - core/drupal
-# bootstrap:
-#   js:
-#     /libraries/popper.js/dist/umd/popper.min.js: {}
-#     /libraries/bootstrap/dist/js/bootstrap.min.js: {}
-#   css:
-#     component:
-#       /libraries/bootstrap/dist/css/bootstrap.min.css: {}
-# bootstrap_cdn:
-#   js:
-#     //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
-#     //stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js: {}
-#   css:
-#     component:
-#       //stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css: {}
 
 bootstrap:
   js:
@@ -51,3 +35,12 @@ slider:
   js:
     //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js:
       { type: external, minified: true }
+
+
+tabs:
+  js:
+    js/global.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - mytheme/slider
